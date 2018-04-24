@@ -12,14 +12,16 @@
 
     <header>
       <div class="header-logo">
-        <li>
-       <%= link_to("相撲掲示板アプリ","/")%>
-     </li>
+
       </div>
       <ul class="header-menus">
-        <li><%= link_to("掲示板アプリ説明","/about")%></li>
+				<li>
+			 <%= link_to("相撲掲示板アプリ","/")%>
+		 </li>
+        <li><%= link_to("好きな力士","/about")%></li>
         <li><%= link_to("投稿一覧","/posts/index")%></li>
       </ul>
+			  <img class="header-logo" src= "/力士アイコン.png">
     </header>
 
     <%= yield %>

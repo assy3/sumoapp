@@ -1,0 +1,55 @@
+
+
+<!-- <h3><td><%= @post.content %></td></h3> -->
+
+
+<table class="form">
+<%= form_tag(controller: "dengonban", action: "suled") do %>
+	<!-- <tr>
+		<td>名前:</td>
+		<td><%= text_field_tag("name")%><td>
+	</tr> -->
+
+	<tr>
+		<td>スレタイトル</td>
+		<td><%=  text_field_tag("mail",@post.content,size:50) %></td>
+	</tr>
+	<tr>
+		<td>メッセージ
+		</td>
+		<td><%= text_field_tag("msg",'',size: 50)%></td>
+	</tr>
+		<td></td>
+			<td><%= submit_tag("送信")%></td>
+	</tr>
+<%end%>
+</table>
+
+<table class="dengon">
+<tr>
+	<th>No,</th>
+	<th>名前</th>
+	<th>メッセージ</th>
+	<!-- <th>投稿日時</th> -->
+</tr>
+
+
+<% number = 1 %>
+<% name = "||名無しさん||" %>
+<% @dengon_data.each do |key, obj| %>
+<% if obj['mail']  ==  @post.content %>
+
+<tr>
+	<td class="mail"><%= number  %></td>
+	<td class="name"><%= name %></td>
+	<td class="msg"><%= obj['msg'] %></td>
+
+	<!-- <td class="time"><%= Time.at(key.to_i) %></td> -->
+</tr>
+<% number = (number + 1) %>
+<% end %>
+
+<% end %>
+
+
+</table>

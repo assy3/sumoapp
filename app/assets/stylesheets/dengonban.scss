@@ -1,0 +1,23 @@
+// Place all the styles related to the dengonban controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.sule-submit {
+    background-color: #fbeefc;
+    border-left: 228px solid #c92ad2;
+    color: #c92ad2;
+    margin: 2em 0;
+    padding: 2em;
+}
+
+.dengon {
+	position: relative;
+	top: 120px;
+	left: 20px;
+	width: 700px;
+    background-color: #cafbce;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px #cafbce;
+    color: #0a8915;
+    margin: 2em 0;
+
+}
